@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Lobster&display=swap');
 
 *, *::before, *::after {
     margin: 0;
@@ -8,7 +8,10 @@
 
 html {
     font-size: 62.5%;
+    overflow: hidden;
 }
+
+/* HEADER ELEMENTS */
 
 header {
     width: 60rem;
@@ -33,4 +36,88 @@ header h2 {
     line-height: 1.4;
     max-width: 50ch;
     color: rgb(100, 100, 100)
+}
+
+/* FORM */
+
+form fieldset {
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+    border: none;
+    background-color: #E9E9E9;
+    border-radius: 10px;
+    max-width: 40rem;
+    align-items: center;
+    padding: 3rem 2rem;
+}
+
+form fieldset legend {
+    font-size: 4rem;
+    font-family: 'Lobster';
+    margin-left: 1rem;
+}
+
+form fieldset input {
+    border: 2px solid #7A7A7A;
+    border-radius: 5px;
+    height: 4.8rem;
+    width: 27rem;
+    padding-inline: 1.2rem;
+    font-size: 2rem;
+    background-color: inherit;
+}
+
+form fieldset button {
+    width: 22rem;
+    height: 4.4rem;
+    border: none;
+    border-radius: 3px;
+    background-color: rgb(80, 80, 80);
+    box-shadow: 0px 0px 3px rgb(80, 80, 80);
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.8rem;
+    letter-spacing: 0.15em;
+    font-family: 'Roboto';
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+form fieldset input::-webkit-input-placeholder {
+    font-weight: bold;
+}
+
+/* BACKGROUND */
+
+#top-right-circle, #bottom-right-circle {
+    position: absolute;
+    border-radius: 50%;
+}
+
+#top-right-circle {
+    width: 890px;
+    height: 890px;
+    background-size: cover;
+    background-image: url(flying-cars-pre-order.jpg);
+    right: -14rem;
+    top: -19rem;
+    filter: saturate(0.2);
+    transform: rotate(-25deg);
+}
+
+#bottom-right-circle {
+    width: 500px;
+    height: 500px;
+    background-color: red;
+    right: 50rem;
+    background-color: rgb(217, 217, 217);
+    bottom: -25rem;
+}
+
+/* MARGIN LEFT FOR ALL TEXT ELEMENTS */
+
+header, #project-description, form fieldset {
+    
 }
