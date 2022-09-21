@@ -16,8 +16,8 @@
 
         <p id="project-description">
             Our dreams will become reality in the near future! 
-            Flying cars will never be the unattainable future. 
-            Our team has been working on it for a very long time and now it’s the time!
+            Flying cars will never be the unattainable dream. 
+            Our team has been working on it very long and now it’s the time!
         </p>
 
         <!-- SIGN UP FORM -->
@@ -25,9 +25,11 @@
         <form>
             <fieldset>
                 <legend>Sign Up</legend>
-                <input type="text" placeholder="First name" maxlength="50">
-                <input type="text" placeholder="Surname" maxlength="50">
-                <input type="email" placeholder="E-mail" maxlength="80">
+                <input type="text" placeholder="First name" maxlength="50" required 
+                pattern="^\S+.*|\s+\S+.*">
+                <input type="text" placeholder="Last name" maxlength="50" required
+                pattern="^\S+.*|\s+\S+.*">
+                <input type="email" placeholder="E-mail" maxlength="80" required>
                 <button>sign up</button>
             </fieldset>
         </form>
@@ -35,6 +37,7 @@
         <!-- BACKGROUND PART -->
 
         <div id="top-right-circle"></div>
-        <div id="bottom-right-circle"></div>
+        <div id="bottom-circle"></div>
+        <script src="functions.js" type="text/javascript"></script>
     </body>
 </html>
