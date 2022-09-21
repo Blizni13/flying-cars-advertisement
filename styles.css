@@ -11,6 +11,11 @@ html {
     overflow: hidden;
 }
 
+:root {
+    --main-font: 'Roboto'
+    --second-font: 'Lobster'
+}
+
 /* HEADER ELEMENTS */
 
 header {
@@ -20,6 +25,7 @@ header {
 header h1 {
     font-size: 7.8rem;
     line-height: 70px;
+    font-family: var(--main-font)
 }
 
 header h2 {
@@ -28,13 +34,15 @@ header h2 {
     transform: rotate(-7deg);
     margin-left: 42%;
     margin-top: -1.5rem;
+    font-weight: 900;
+    font-family: var(--main-font)
 }
 
 #project-description {
     font-size: 2.3rem;
-    font-family: 'Roboto';
+    font-family: var(--main-font);
     line-height: 1.4;
-    max-width: 50ch;
+    max-width: 39ch;
     color: rgb(100, 100, 100)
 }
 
@@ -47,9 +55,10 @@ form fieldset {
     border: none;
     background-color: #E9E9E9;
     border-radius: 10px;
-    max-width: 40rem;
+    max-width: 45rem;
     align-items: center;
-    padding: 3rem 2rem;
+    padding: 4rem 2rem;
+    height: 44rem;
 }
 
 form fieldset legend {
@@ -61,16 +70,16 @@ form fieldset legend {
 form fieldset input {
     border: 2px solid #7A7A7A;
     border-radius: 5px;
-    height: 4.8rem;
-    width: 27rem;
+    height: 5.8rem;
+    width: 30rem;
     padding-inline: 1.2rem;
     font-size: 2rem;
     background-color: inherit;
 }
 
 form fieldset button {
-    width: 22rem;
-    height: 4.4rem;
+    width: 23rem;
+    padding-block: 1.2rem;
     border: none;
     border-radius: 3px;
     background-color: rgb(80, 80, 80);
@@ -78,9 +87,9 @@ form fieldset button {
     color: white;
     text-transform: uppercase;
     font-weight: bold;
-    font-size: 1.8rem;
-    letter-spacing: 0.15em;
-    font-family: 'Roboto';
+    font-size: 2.5rem;
+    letter-spacing: 0.1em;
+    font-family: var(--main-font);
     cursor: pointer;
     margin-top: 1rem;
 }
@@ -97,27 +106,35 @@ form fieldset input::-webkit-input-placeholder {
 }
 
 #top-right-circle {
-    width: 890px;
-    height: 890px;
+    width: 1150px;
+    height: 1250px;
     background-size: cover;
     background-image: url(flying-cars-pre-order.jpg);
-    right: -14rem;
-    top: -19rem;
+    right: -10rem;
+    top: -55rem;
     filter: saturate(0.2);
-    transform: rotate(-25deg);
+    transform: rotate(-35deg);
 }
 
 #bottom-right-circle {
-    width: 500px;
-    height: 500px;
+    width: 600px;
+    height: 600px;
     background-color: red;
-    right: 50rem;
+    right: 64rem;
     background-color: rgb(217, 217, 217);
-    bottom: -25rem;
+    bottom: -30rem;
 }
 
 /* MARGIN LEFT FOR ALL TEXT ELEMENTS */
 
 header, #project-description, form fieldset {
-    
+    margin-left: 6.5%;
+}
+
+header {
+    margin-top: 5rem;
+}
+
+#project-description {
+    padding-block: 2em;
 }
