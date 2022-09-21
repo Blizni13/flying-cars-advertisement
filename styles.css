@@ -53,7 +53,8 @@ header h2 {
     font-family: var(--main-font);
     line-height: 1.4;
     max-width: 39ch;
-    color: rgb(100, 100, 100)
+    color: rgb(100, 100, 100);
+    padding-block: 4rem;
 }
 
 /* FORM */
@@ -78,13 +79,51 @@ form fieldset legend {
 }
 
 form fieldset input {
-    border: 2px solid #7A7A7A;
+    border: 2px solid rgb(120, 120, 120);
     border-radius: 5px;
     height: 5.8rem;
     width: 30rem;
     padding-inline: 1.2rem;
     font-size: 2rem;
     background-color: inherit;
+}
+
+form fieldset input:not(:placeholder-shown) {
+    border-color: red;
+}
+
+form fieldset input:valid {
+    border-color: rgb(0, 128, 0);
+}
+
+.shake {
+    animation: shake 0.5s;
+}
+
+@keyframes shake {
+    0% {
+        transform: translate(0, 0)
+    }
+
+    25% {
+        transform: translate(-2px, -2px)
+    }
+
+    50% {
+        transform: translate(2px, 2px)
+    }
+
+    75% {
+        transform: translate(-2px, -2px)
+    }
+
+    100% {
+        transform: translate(2px, 2px)
+    }
+}
+
+form fieldset input::-webkit-input-placeholder {
+    font-weight: bold;
 }
 
 form fieldset button {
@@ -102,10 +141,15 @@ form fieldset button {
     font-family: var(--main-font);
     cursor: pointer;
     margin-top: 1rem;
+    transition-duration: 0.25s;
 }
 
-form fieldset input::-webkit-input-placeholder {
-    font-weight: bold;
+form fieldset button:hover {
+    background-color: rgb(100, 100, 100)
+}
+
+form fieldset button:active {
+    background-color: rgb(110, 110, 110)
 }
 
 /* BACKGROUND */
@@ -139,11 +183,6 @@ form fieldset input::-webkit-input-placeholder {
 
 header, #project-description, form fieldset {
     margin-left: 6.5%;
-}
-
-
-#project-description {
-    padding-block: 4rem;
 }
 
 /* RESPONSIVE SETTINGS */
@@ -315,5 +354,3 @@ header, #project-description, form fieldset {
         margin-inline: auto;
     }
 }
-
-/* CHECK IF MARGIN 0 TO HEADER REPAIR PROBLEM WITH BODY BOTTOM NOT ALIGN*/
