@@ -24,7 +24,7 @@ header {
 
 header h1 {
     font-size: 7.8rem;
-    line-height: 70px;
+    line-height: 0.9;
     font-family: var(--main-font)
 }
 
@@ -33,7 +33,7 @@ header h2 {
     color: #636262;
     transform: rotate(-7deg);
     margin-left: 42%;
-    margin-top: -1.5rem;
+    margin-top: -20px;
     font-weight: 900;
     font-family: var(--main-font)
 }
@@ -100,7 +100,7 @@ form fieldset input::-webkit-input-placeholder {
 
 /* BACKGROUND */
 
-#top-right-circle, #bottom-right-circle {
+#top-right-circle, #bottom-circle {
     position: absolute;
     border-radius: 50%;
 }
@@ -112,15 +112,15 @@ form fieldset input::-webkit-input-placeholder {
     background-image: url(flying-cars-pre-order.jpg);
     right: -10rem;
     top: -55rem;
-    filter: saturate(0.2);
+    filter: saturate(0.10);
     transform: rotate(-35deg);
 }
 
-#bottom-right-circle {
+#bottom-circle {
     width: 600px;
     height: 600px;
     background-color: red;
-    right: 64rem;
+    right: 56rem;
     background-color: rgb(217, 217, 217);
     bottom: -30rem;
 }
@@ -136,5 +136,229 @@ header {
 }
 
 #project-description {
-    padding-block: 2em;
+    padding-block: 4rem;
+}
+
+/* RESPONSIVE SETTINGS */
+
+@media only screen and (max-width: 1750px) {
+    #top-right-circle {
+        width: 1000px;
+        height: 1000px;
+        right: -22rem;
+        top: -40rem;
+    }
+
+    #bottom-circle {
+        right: 30rem;
+    }
+
+    header, #project-description, form fieldset {
+        margin-left: 8%;
+    }
+}
+
+@media only screen and (max-width: 1500px) {
+    #top-right-circle {
+        width: 900px;
+        height: 900px;
+        right: -22rem;
+        top: -40rem;
+    }
+
+    #bottom-circle {
+        right: 14rem;
+    }
+}
+
+@media only screen and (max-width: 1350px) {
+    #top-right-circle {
+        width: 800px;
+        height: 800px;
+        right: -26rem;
+        top: -23rem;
+    }
+
+    #bottom-circle {
+        width: 500px;
+        height: 500px;
+        right: 12rem;
+        bottom: -25rem;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    #top-right-circle {
+        width: 600px;
+        height: 600px;
+        right: -12rem;
+        top: -20rem;
+    }
+
+    #bottom-circle {
+        width: 450px;
+        height: 450px;
+        bottom: -22rem;
+        right: 8rem
+    }
+}
+
+@media only screen and (max-width: 1100px) {
+    #top-right-circle {
+        width: 500px;
+        height: 500px;
+        right: -10rem;
+        top: -17rem;
+    }
+
+    #bottom-circle {
+        right: 4rem;
+        bottom: -24rem;
+    }
+
+    html {
+        font-size: 8.5px;
+    }
+
+    header {
+        margin-top: 10rem;
+    }
+
+    #project-description {
+        padding-block: 5rem;
+    }
+}
+
+@media only screen and (max-width: 965px) {
+    html {
+        font-size: 7.5px;
+    }
+
+    header {
+        margin-top: 15rem;
+    }
+
+    header h2 {
+        margin-top: -16px;
+    }
+
+    #project-description {
+        padding-block: 7rem;
+    }
+
+    #top-right-circle {
+        width: 400px;
+        height: 400px;
+        right: -8rem;
+        top: -12rem;
+    }
+
+    #bottom-circle {
+        bottom: -25rem;
+        width: 400px;
+        height: 400px;
+    }
+}
+
+@media only screen and (max-width: 810px) {
+    header {
+        margin-left: 10%;
+        margin-top: 50px;
+    }
+
+    #project-description {
+        margin-left: 50%;
+        transform: translateX(-50%);
+        margin-top: 100px;
+        font-size: 2.8rem;
+    }
+
+    form fieldset {
+        margin-left: 47%;
+        margin-top: 50px;
+    }
+
+    #bottom-circle {
+        width: 350px;
+        height: 350px;
+        left: -100px;
+        bottom: -100px;
+    }
+
+    #top-right-circle {
+        width: 300px;
+        height: 300px;
+        right: -6rem;
+        top: -8rem;
+    }
+}
+
+@media only screen and (max-width: 720px) {
+    html {
+        font-size: 6.5px;
+    }
+
+    header h2 {
+        margin-top: -10px;
+    }
+
+    #project-description {
+        font-size: 3.2rem;
+    }
+
+    form fieldset {
+        margin-top: 100px; 
+        margin-left: 42%;
+    }
+
+    #bottom-circle {
+        left: -150px;
+        bottom: -150px;
+    }
+
+    #top-right-circle {
+        right: -100px;
+        top: -120px;
+    }
+}
+
+@media only screen and (max-width: 570px) {
+    html {
+        font-size: 5.5px;
+    }
+
+    header {
+        margin-left: 3%;
+    }
+
+    #project-description {
+        margin-top: 170px;
+    }
+    
+    form fieldset {
+        margin-left: 45%;
+        margin-top: 160px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    html {
+        font-size: 5px;
+    }
+
+    header, #project-description, form fieldset {
+        margin: 0;
+        margin-inline: auto;
+        max-width: 250px;
+    }
+
+    header {
+        margin-top: 250px;
+    }
+
+    #project-description {
+        transform: translate(0) /* reset this setting */;
+        max-width: 30ch;
+    }
+
 }
