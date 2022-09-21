@@ -8,13 +8,15 @@
 
 html {
     font-size: 62.5%;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
 }
 
 body {
     width: 100vw;
     height: 100vh;
     overflow: hidden;
-    margin-top: -50px;
     position: relative;
 }
 
@@ -27,7 +29,7 @@ body {
 
 header {
     width: 60rem;
-    padding-top: 3rem;
+    padding-top: 40px;
 }
 
 header h1 {
@@ -139,9 +141,6 @@ header, #project-description, form fieldset {
     margin-left: 6.5%;
 }
 
-header {
-    margin-top: 5rem;
-}
 
 #project-description {
     padding-block: 4rem;
@@ -209,10 +208,6 @@ header {
         font-size: 9px;
     }
 
-    body {
-        margin-top: -45px;
-    }
-
     header {
         padding-top: 10rem;
     }
@@ -234,8 +229,8 @@ header {
         font-size: 8.5px;
     }
 
-    body {
-        margin-top: -43px;
+    header {
+        padding-top: 110px;
     }
 
     #top-right-circle {
@@ -257,12 +252,8 @@ header {
         font-size: 7px;
     }
 
-    body {
-        margin-top: -35px;
-    }
-
     header {
-        padding-top: 220px;
+        padding-top: 200px;
     }
 
     #bottom-circle {
@@ -278,10 +269,6 @@ header {
         font-size: 6.5px;
     }
 
-    body {
-        margin-top: -33px;
-    }
-
     header {
         padding-top: 230px;
     }
@@ -289,7 +276,6 @@ header {
 
 @media only screen and (max-width: 385px) {
     body {
-        margin: 0;
         padding-inline: 2.5rem;
     }
 
@@ -316,6 +302,7 @@ header {
         margin: 0;
         text-align: center;
         width: 100%;
+        padding-top: 220px;
     }
 
     #project-description {
