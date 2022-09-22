@@ -64,3 +64,11 @@ window.onclick = (event) => {
         }
     }
 }
+
+// MESSAGE AFTER SIGN UP BUTTON IS CLICKED
+
+const signUpForm = document.getElementsByTagName('form')[0]
+
+signUpForm.addEventListener('submit', () => {
+    alert('Thank you for signing up!')
+})
