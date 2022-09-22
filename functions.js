@@ -31,16 +31,24 @@ window.onclick = (event) => {
 
     if (event.target === firstName) {
         removeShake(firstName)
+        firstName.style.color = 'black'
     } else {
         if (firstNameBorderColor === red) {
             addShake(firstName)
+        } else if (firstNameBorderColor === green) {
+            firstName.style.color = green
         }
     }
 
     if (event.target === lastName) {
         removeShake(lastName)
+        lastName.style.color = 'black'
     } else {
-        if (lastNameBorderColor === red) addShake(lastName)
+        if (lastNameBorderColor === red) {
+            addShake(lastName)
+        } else if (lastNameBorderColor === green) {
+            lastName.style.color = 'green'
+        }
     }
 
 
@@ -51,8 +59,8 @@ window.onclick = (event) => {
         if (eMailBorderColor === red) {
             addShake(eMail)
             eMail.style.color = 'red'
-        } else {
-            eMail.style.color = 'black'
+        } else if (eMailBorderColor === green) {
+            eMail.style.color = 'green'
         }
     }
 }
